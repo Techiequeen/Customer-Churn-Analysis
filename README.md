@@ -126,15 +126,10 @@ ORDER BY Churn_count DESC;
 ![image](https://github.com/user-attachments/assets/fe71e40c-ef75-4e74-a267-9ecb27f2d674)
 ~~~sql
 --Q7. What is the average tenure of customers who churned and those who did not?
-SELECT CustomerID, AVG(Tenure) AS Average_tenure
+SELECT Churn,
+AVG(Tenure) AS Average_tenure
 FROM customer_churn
-WHERE Churn = 1
-GROUP BY CustomerID;
-
-SELECT CustomerID, AVG(Tenure) AS Average_tenure
-FROM customer_churn
-WHERE Churn = 0
-GROUP BY CustomerID;
+GROUP BY Churn;
 ~~~
 ![image](https://github.com/user-attachments/assets/d6063b3e-eb80-4d72-a453-43e9668f5341)
 ~~~sql
@@ -147,15 +142,10 @@ GROUP BY Usage_Frequency;
 ![image](https://github.com/user-attachments/assets/09eed270-f09f-4fb8-8e77-074c471625ed)
 ~~~sql
 --Q9.Are customers with higher total spend more or less likely to churn?
-SELECT CustomerID, SUM(Total_Spend) AS Total_Spend
+SELECT Churn,
+SUM(Total_Spend) AS Total_Spend
 FROM customer_churn
-WHERE Churn = 1
-GROUP BY  CustomerID,Total_Spend;
-
-SELECT CustomerID, SUM(Total_Spend) AS Total_Spend
-FROM customer_churn
-WHERE Churn = 0
-GROUP BY  CustomerID,Total_Spend;
+GROUP BY  Churn;
 ~~~
 ![image](https://github.com/user-attachments/assets/e7185ddb-cc9b-403e-acd6-4f599bbaaca1)
 
