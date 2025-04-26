@@ -10,15 +10,15 @@ The analysis is based on a customer churn dataset containing the following colum
 - Customer ID
 - Age
 - Gender
-- Tenure
+- Tenure (How long a customer have used the service)
 - Usage frequency
 - Support calls
 - Payment delay
 - Subscription type
-- Contract length
+- Contract length 
 - Total spend
-- Last interaction
-- Churn
+- Last interaction (Time since last interaction)
+- Churn (0 = not churned, 1 = churned)
 
 ### Tool Used
 
